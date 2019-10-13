@@ -18,6 +18,8 @@ import { TemplateDrivenComponent } from './features/forms/template-driven/templa
 import { NotificationsComponent } from './features/notifications/notifications.component';
 import { ModelDrivenComponent } from './features/forms/model-driven/model-driven.component';
 import { HttpObservablesComponent } from './features/http/http-observables/http-observables.component';
+import { AddUserComponent } from './features/crud/add-user/add-user.component';
+import { ListUsersComponent } from './features/crud/list-users/list-users.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { HttpObservablesComponent } from './features/http/http-observables/http-
     TemplateDrivenComponent,
     NotificationsComponent,
     ModelDrivenComponent,
-    HttpObservablesComponent
+    HttpObservablesComponent,
+    AddUserComponent,
+    ListUsersComponent
   ],
   imports: [
     CoreModule,
