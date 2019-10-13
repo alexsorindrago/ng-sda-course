@@ -1,0 +1,58 @@
+<mat-card>
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+
+        <!-- <fieldset ngModelGroup="name">
+
+
+    </fieldset> -->
+
+        <!-- first name -->
+
+        <mat-form-field>
+            <input 
+            matInput 
+            placeholder="FirstName" 
+            type="text" 
+            name="firstName" 
+            ngModel>
+        </mat-form-field>
+
+        <!-- email -->
+        <mat-form-field>
+            <input 
+            matInput 
+            placeholder="Email" 
+            type="email" 
+            name="email" 
+            [(ngModel)]="model.email" 
+            #email="ngModel"
+            required 
+            pattern="[^ @]*@[^ @]*">
+            <div [ngClass]="{ 'invalid-feedback': f.form.controls.email?.invalid }">
+                Wrong email format
+            </div>
+        </mat-form-field>
+
+        <!-- password -->
+        <mat-form-field>
+            <input 
+            matInput 
+            placeholder="Password" 
+            type="password" 
+            name="password" 
+            [(ngModel)]="model.password"
+            required>
+        </mat-form-field>
+
+        <button 
+        mat-flat-button 
+        color="primary" 
+        type="submit" 
+        [disabled]="f.invalid">Submit</button>
+
+    </form>
+</mat-card>
+
+<mat-card>
+    <pre>{{ f.value | json }}</pre>
+</mat-card>

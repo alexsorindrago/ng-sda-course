@@ -1,0 +1,44 @@
+<!-- Iterate using ngFor-->
+
+<ul>
+<li *ngFor="let person of people">
+    {{ person.name }} - {{ person.age }}
+</li>   
+</ul>
+
+<!-- Iterate using ngFor with Index-->
+<ul>
+    <li *ngFor="let person of people; let i = index">
+       {{ i + 1 }}.  {{ person.name }} is {{ person.age }} years old.
+    </li>   
+</ul>
+
+<!-- Iterate using ngIf-->
+<ul *ngFor="let person of people">
+    <li *ngIf="person.age < 30"> 
+       {{ i +1 }} {{ person.name }} - {{ person.age }}
+    </li>   
+</ul>
+
+<!-- Iterate using ngSwitch-->
+<ul *ngFor="let person of people" [ngSwitch]="person.country">
+    <li *ngSwitchCase=" 'UK' ">
+        {{ person.name }}
+    </li>   
+    <li *ngSwitchCase=" 'USA' ">
+        {{ person.name }}
+    </li> 
+    <li *ngSwitchCase=" 'HK' ">
+        {{ person.name }}
+    </li> 
+    <li *ngSwitchDefault>
+        {{ person.name }}
+    </li> 
+</ul>
+
+<!-- Iterate using ngStyle-->
+<ul *ngFor="let person of peopleWithoutColor">
+    <li [style.color]=getColor(person.country)>
+        {{ person.name }} - {{ person.country }}
+    </li>   
+</ul>
