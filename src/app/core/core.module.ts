@@ -11,7 +11,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule, // angular common classes
     SharedModule, // shared stuff
-
     BrowserModule, // browser suport
     BrowserAnimationsModule, // animations
     ToastrModule.forRoot({
