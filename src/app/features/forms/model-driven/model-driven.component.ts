@@ -34,12 +34,12 @@ export class ModelDrivenComponent implements OnInit {
 
   public onSubmit(): void {
     console.log('Submit');
-    this.toastr.info('form submitted');
+    this.toastr.success('form submitted');
   }
 
   public onCancel(): void {
     console.log('Cancelled');
-    this.toastr.info('form cancelled');
+    this.toastr.error('form cancelled');
   }
 
 }

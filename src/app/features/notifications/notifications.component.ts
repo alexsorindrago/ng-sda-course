@@ -28,7 +28,6 @@ export class NotificationsComponent {
 
   constructor(private toastr: ToastrService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
