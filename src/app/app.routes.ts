@@ -27,7 +27,7 @@ export const appRoutes: Routes = [
     { path: appRoutesNames.CRUD, component: ListUsersComponent },
     { path: appRoutesNames.ADD_USER, component: AddUserComponent },
     { path: appRoutesNames.LIST_USER, component: ListUsersComponent },
-    { path: '', pathMatch: 'full', component: AppComponent }
+    { path: '', pathMatch: 'full', redirectTo: 'app' }
 ];
 
 export const appRouting: ModuleWithProviders = RouterModule.forRoot(appRoutes);
